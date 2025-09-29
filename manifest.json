@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "PassForge",
+  "description": "Password Generator and Strength Checker (privacy-first).",
+  "version": "0.1.0",
+
+  "icons": {
+    "16": "assets/icon-16.png",
+    "48": "assets/icon-48.png",
+    "128": "assets/icon-128.png"
+  },
+
+  "action": {
+    "default_title": "PassForge",
+    "default_popup": "popup/popup.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["common/strength.js", "content/content.js"],
+      "css": ["content/content.css"],
+      "run_at": "document_end"
+    }
+  ],
+
+  "permissions": ["clipboardWrite"],
+  "host_permissions": ["<all_urls>"]
+}

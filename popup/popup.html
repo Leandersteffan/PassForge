@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PassForge</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header>
+    <h1>PassForge</h1>
+  </header>
+
+  <section class="check">
+    <label for="pwd">Check strength</label>
+    <input id="pwd" type="password" placeholder="Type or paste a password" />
+    <div class="meter"><div id="bar"></div></div>
+    <div id="label" class="muted">Start typing…</div>
+  </section>
+
+  <section class="gen">
+    <div class="row">
+      <label for="len">Length</label>
+      <input id="len" type="number" min="8" max="64" value="16" />
+    </div>
+    <div class="row options">
+      <label><input id="opt-upper" type="checkbox" checked /> Uppercase</label>
+      <label><input id="opt-lower" type="checkbox" checked /> Lowercase</label>
+      <label><input id="opt-digits" type="checkbox" checked /> Digits</label>
+      <label><input id="opt-symbols" type="checkbox" /> Symbols</label>
+    </div>
+    <div class="row">
+      <button id="gen">Generate</button>
+      <input id="out" type="text" readonly />
+      <button id="copy">Copy</button>
+      <button id="fill">Fill field</button>
+    </div>
+  </section>
+
+  <footer>
+    <small class="muted">All checks run locally. Nothing is sent anywhere.</small>
+  </footer>
+
+  <!-- Shared logic (once implemented) -->
+  <script src="../common/strength.js"></script>
+  <!-- Popup controller -->
+  <script src="popup.js"></script>
+</body>
+</html>
