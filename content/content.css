@@ -1,0 +1,53 @@
+/* PassForge inline badge styles (scoped with pf- prefix) */
+.pf-badge {
+  position: absolute;
+  z-index: 2147483647; /* on top of almost everything */
+  transform: translateY(-100%);
+  background: #101318;
+  color: #e7ecf3;
+  font: 12px/1.2 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial;
+  border: 1px solid #2a3340;
+  border-radius: 8px;
+  padding: 6px 8px;
+  box-shadow: 0 6px 16px rgba(0,0,0,.35);
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.pf-hidden { display: none !important; }
+
+.pf-meter {
+  width: 90px;
+  height: 6px;
+  background: #222;
+  border-radius: 999px;
+  overflow: hidden;
+  flex: 0 0 auto;
+}
+
+.pf-meter > div {
+  height: 100%;
+  width: 0%;
+  background: #d9534f; /* will be changed via JS */
+  transition: width .15s ease;
+}
+
+.pf-label {
+  color: #9aa7b7;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.pf-gen {
+  margin-left: 4px;
+  padding: 4px 6px;
+  border-radius: 6px;
+  background: #1f2630;
+  border: 1px solid #2a3340;
+  color: #e7ecf3;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.pf-gen:hover { background: #232b36; }
