@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "PassForge",
-  "description": "Password Generator and Strength Checker (privacy-first).",
+  "name": "PassForge - Password Generator & Strength Checker",
+  "description": "Generate strong, secure passwords and check their strength instantly - all locally, privacy-first.",
   "version": "1.0.0",
 
   "icons": {
